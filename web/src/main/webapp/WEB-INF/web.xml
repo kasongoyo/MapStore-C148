@@ -10,7 +10,7 @@
             classpath*:applicationContext.xml
         </param-value>
 	</context-param>
-    <display-name>description - Web App</display-name>
+    <display-name>Photomap - Web App</display-name>
 	<context-param>
         <param-name>webAppRootKey</param-name>
         <param-value>geostore.root</param-value>
@@ -80,7 +80,7 @@
       <servlet-name>mapfish.print</servlet-name>
       <url-pattern>/pdf/*</url-pattern>
     </servlet-mapping>
-	
+
 	<!-- Default page to serve -->
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

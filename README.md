@@ -1,4 +1,4 @@
-description
+Photomap
 ==========
 
 Quick Start

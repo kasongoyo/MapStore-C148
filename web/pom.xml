@@ -8,7 +8,7 @@
   </parent>
   <artifactId>MapStore-C148-web</artifactId>
   <packaging>war</packaging>
-  <name>description - WAR</name>
+  <name>Photomap - WAR</name>
   <url>https://github.com/geosolutions-it/MapStore-C148</url>
 
   <properties>
