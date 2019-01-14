@@ -61,7 +61,7 @@
                 "isNew": true,
                 "autoload": false
             },
-            "selectedService": "Demo CSW Service",
+            "selectedService": "PHOTOMAP WMS Service",
             "services": {
               "PHOTOMAP WMS Service": {
                 "url": "https://maps.photomap.sk/geoserver/wms",
