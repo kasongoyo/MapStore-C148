@@ -1,7 +1,19 @@
 {
     "proxyUrl": {
         "url": "proxy/?url=",
-        "useCORS": ["http://demo.geo-solutions.it/geoserver", "https://demo.geo-solutions.it:443/geoserver", "https://demo.geo-solutions.it/geoserver", "https://nominatim.openstreetmap.org", "http://cloudsdi.geo-solutions.it"]
+        "useCORS": [
+           "http://demo.geo-solutions.it/geoserver",
+           "https://demo.geo-solutions.it:443/geoserver",
+           "https://demo.geo-solutions.it/geoserver",
+           "https://nominatim.openstreetmap.org",
+           "http://cloudsdi.geo-solutions.it",
+           "http://maps.photomap.sk",
+           "https://maps.photomap.sk",
+           "https://maps.photomap.sk:443",
+           "http://mapstore.photomap.sk",
+           "https://mapstore.photomap.sk",
+           "https://mapstore.photomap.sk:443"
+        ]
     },
     "geoStoreUrl": "rest/geostore/",
     "printUrl": "pdf/info.json",
@@ -25,6 +37,10 @@
     "authenticationRules": [{
         "urlPattern": ".*geostore.*",
         "method": "bearer"
+    },{
+        "urlPattern": "\\/geoserver/.*",
+        "authkeyParamName": "authkey",
+        "method": "authkey"
     }],
     "monitorState": [
       {"name": "routing", "path": "routing.location.pathname"},
@@ -47,23 +63,11 @@
             },
             "selectedService": "Demo CSW Service",
             "services": {
-              "Demo CSW Service": {
-                "url": "https://demo.geo-solutions.it/geoserver/csw",
-                "type": "csw",
-                "title": "Demo CSW Service",
-                "autoload": true
-              },
-              "Demo WMS Service": {
-                "url": "https://demo.geo-solutions.it/geoserver/wms",
+              "PHOTOMAP WMS Service": {
+                "url": "https://maps.photomap.sk/geoserver/wms",
                 "type": "wms",
-                "title": "Demo WMS Service",
-                "autoload": false
-              },
-              "Demo WMTS Service": {
-                "url": "https://demo.geo-solutions.it/geoserver/gwc/service/wmts",
-                "type": "wmts",
-                "title": "Demo WMTS Service",
-                "autoload": false
+                "title": "PHOTOMAP WMS Service",
+                "autoload": true
               }
             }
           }
