@@ -8,7 +8,7 @@
     </parent>
     <artifactId>MapStore-C148-backend</artifactId>
     <packaging>jar</packaging>
-    <name>description - Backend Services</name>
+    <name>Photomap - Backend Services</name>
     <url>http://www.geo-solutions.it</url>
 
     <properties>

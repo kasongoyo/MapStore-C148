@@ -1,7 +1,7 @@
 {
     "name": "MapStore-C148",
     "version": "1.0.0",
-    "description": "description",
+    "description": "Photomap",
     "repository": "https://github.com/geosolutions-it/MapStore-C148",
     "main": "index.js",
     "devDependencies": {
