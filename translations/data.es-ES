@@ -1,0 +1,10 @@
+{
+    "locale": "es-ES",
+    "messages": {
+        "photomapViewerAttribution": "<small>© Photomap, All Rights reserved |</small>",
+        "home":{
+            "shortDescription": " ",
+            "footerDescription": "<small><strong>PHOTOMAP, s.r.o.</strong> / powered by GeoSolutions</small>"
+        }
+    }
+}
