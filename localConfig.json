@@ -23,7 +23,7 @@
     "ignoreMobileCss": false,
     "useAuthenticationRules": true,
     "loadAfterTheme": true,
-    "translationsPath": "./MapStore2/web/client/translations",
+    "translationsPath": ["./MapStore2/web/client/translations", "./translations"],
     "themePrefix": "MapStore-C148",
     "defaultMapOptions": {
       "cesium": {
@@ -229,7 +229,7 @@
                 }
               }
             }
-          }, "AutoMapUpdate", "HelpLink", "Share", "DrawerMenu", "Version", "Notifications", "BackgroundSelector", "Annotations",
+          }, "AutoMapUpdate", "HelpLink", {"name": "Share", "cfg": {"showAPI": false}}, "DrawerMenu", "Version", "Notifications", "BackgroundSelector", "Annotations",
             {
                 "name": "Identify",
                 "cfg": {
@@ -351,7 +351,8 @@
             "OmniBar", "Login", "Save", "SaveAs", "BurgerMenu", "Expander", "Undo", "Redo", "FullScreen", "GlobeViewSwitcher", "SearchServicesConfig", "WidgetsBuilder", "Widgets",
             "FloatingLegend",
             "FeedbackMask",
-            "StyleEditor"
+            "StyleEditor",
+            "PhotomapAttribution"
         ],
         "embedded": [{
                 "name": "Map",
@@ -468,9 +469,24 @@
             "cfg": {
                 "className": "navbar shadow navbar-home"
             }
-        }, "ManagerMenu", "Login","Language", "NavMenu", "Attribution", "ScrollTop", "Notifications"],
-        "maps": ["HomeDescription", "MapSearch", "CreateNewMap", "FeaturedMaps", "ContentTabs",
-
+        }, "ManagerMenu", "Login","Language", "NavMenu",
+        {
+            "name": "Attribution",
+            "cfg": {
+                "label": "PHOTOMAP",
+                "href": "#",
+                "src": "assets/img/logo.png"
+            }
+        },
+        "ScrollTop", "Notifications"],
+        "maps": [
+          {
+            "name": "HomeDescription",
+            "cfg": {
+              "name": "PHOTOMAP"
+            }
+          },
+          "MapSearch", "CreateNewMap", "FeaturedMaps", "ContentTabs",
           {
             "name": "Maps",
             "cfg": {
@@ -489,7 +505,19 @@
               },
               "fluid": true
             }
-          }, "Footer", {
+          },
+          {
+            "name": "Footer",
+            "cfg": {
+              "logo": {
+                "src": "assets/img/logo.png",
+                "width": 140,
+                "href": "",
+                "title": "PHOTOMAP",
+                "alt": "PHOTOMAP"
+              }
+            }
+          }, {
           "name": "Cookie",
           "cfg": {
             "externalCookieUrl" : "",
@@ -536,6 +564,19 @@
                 "containerPosition": "header"
             }
         }],
-        "manager": ["Header", "Redirect", "Manager", "Home", "UserManager", "GroupManager", "Footer"]
+        "manager": ["Header", "Redirect", "Manager", "Home", "UserManager", "GroupManager",
+          {
+            "name": "Footer",
+            "cfg": {
+              "logo": {
+                "src": "assets/img/logo.png",
+                "width": 140,
+                "href": "",
+                "title": "PHOTOMAP",
+                "alt": "PHOTOMAP"
+              }
+            }
+          }
+        ]
     }
 }
