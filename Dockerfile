@@ -1,4 +1,4 @@
-FROM tomcat:7.0.75
+FROM tomcat:8.5
 MAINTAINER geosolutions<info@geo-solutions.it>
 
 RUN  export DEBIAN_FRONTEND=noninteractive
