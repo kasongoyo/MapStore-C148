@@ -1,4 +1,4 @@
-FROM tomcat:7.0.75
+FROM tomcat:8.5
 MAINTAINER geosolutions<info@geo-solutions.it>
 
 RUN  export DEBIAN_FRONTEND=noninteractive
@@ -6,7 +6,7 @@ ENV  DEBIAN_FRONTEND noninteractive
 RUN  dpkg-divert --local --rename --add /sbin/initctl
 
 # Set JAVA_HOME to /usr/lib/jvm/default-java and link it to OpenJDK installation
-RUN ln -s /usr/lib/jvm/java-1.7.0-openjdk-amd64/ /usr/lib/jvm/default-java
+RUN ln -s /usr/lib/jvm/java-8-openjdk-amd64/ /usr/lib/jvm/default-java
 ENV JAVA_HOME /usr/lib/jvm/default-java
 
 # Install utilities
