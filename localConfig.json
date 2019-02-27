@@ -74,13 +74,13 @@
         },
         "locales": {
           "supportedLocales": {
-            "it": {
-              "code": "it-IT",
-              "description": "Italiano"
-            },
             "en": {
               "code": "en-US",
               "description": "English"
+            },
+            "it": {
+              "code": "it-IT",
+              "description": "Italiano"
             },
             "fr": {
               "code": "fr-FR",
@@ -534,9 +534,9 @@
           "name": "DashboardEditor",
           "cfg": {
              "catalog": {
-              "url": "https://demo.geo-solutions.it/geoserver/csw",
-              "type": "csw",
-              "title": "Demo CSW Service",
+              "url": "/geoserver/wms",
+              "type": "wms",
+              "title": "Photomap WMS Service",
               "autoload": true
             },
             "containerPosition": "columns"
