@@ -26,20 +26,20 @@ module.exports = require('./MapStore2/buildConfig')(
     '.MapStore-C148',
     [
         new HtmlWebpackPlugin({
-            template: path.join(paths.framework, 'indexTemplate.html'),
+            template: path.join(__dirname, 'indexTemplate.html'),
             chunks: ['MapStore-C148'],
             inject: true,
             hash: true
         }),
         new HtmlWebpackPlugin({
-            template: path.join(paths.framework, 'embeddedTemplate.html'),
+            template: path.join(__dirname, 'embeddedTemplate.html'),
             chunks: ['MapStore-C148-embedded'],
             inject: true,
             hash: true,
             filename: 'embedded.html'
         }),
         new HtmlWebpackPlugin({
-            template: path.join(paths.framework, 'apiTemplate.html'),
+            template: path.join(__dirname, 'apiTemplate.html'),
             chunks: ['MapStore-C148-api'],
             inject: 'head',
             hash: true,
