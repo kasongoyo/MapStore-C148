@@ -1,0 +1,219 @@
+@import "../../../MapStore2/web/client/themes/default/base.less";
+@import "../../../MapStore2/web/client/themes/default/icons.less";
+@import "../../../MapStore2/web/client/themes/default/bootstrap-theme.less";
+@import "../../../MapStore2/web/client/themes/default/ms2-theme.less";
+@import "../../../MapStore2/web/client/themes/default/variables.less";
+@import "variables.less";
+
+// 
+
+.customer-logo {
+    height: 40px;
+}
+
+.page-maps {
+
+    /* change banner style in homepage */
+    div.ms-home-description.jumbotron {
+        color              : @ms2-color-text-primary;
+        background-position: top;
+        background-image   : url('../../img/surveye-banner.png');
+        background-repeat  : no-repeat;
+
+        @media screen and (min-width: 768px) {
+            min-height: 195px;
+        }
+
+        &>.container {
+            background-color: unset;
+        }
+    }
+
+    /* change order and text colors of tabs in homepage */
+    .nav {
+        &.nav-tabs>li>a {
+            color      : inherit;
+            font-weight: 600;
+        }
+
+        &.nav-tabs>li.active>a,
+        &.nav-tabs>li.active>a:hover,
+        &.nav-tabs>li.active>a:focus {
+            border             : 1px solid @ms2-color-primary;
+            border-bottom-color: transparent;
+            color              : @pm-blue;
+        }
+
+        &.nav-tabs {
+            border-bottom-color: @ms2-color-primary;
+        }
+    }
+}
+
+// site navigation bar
+#mapstore-navbar-container {
+
+    // change the height to make blue bottom border visible
+    &.navbar {
+        height       : 57px;
+        border-bottom: 4px solid @pm-dark-blue;
+    }
+
+    // change all navbar link to blue color
+    a {
+        color         : @pm-blue;
+        text-transform: uppercase;
+        font-weight   : bold;
+    }
+
+    .dropdown-menu .glyphicon {
+        color: @pm-blue;
+    }
+
+    #mapstore-burger-menu .btn,
+    #home-button {
+        background-color: @pm-light-blue;
+        border-color    : @pm-light-blue;
+    }
+
+    // change login button 
+    #loginButton {
+        background-color: @ms2-color-primary;
+        border-color    : @ms2-color-primary;
+    }
+}
+
+#navigationBar-container button:nth-child(odd) {
+    background-color: @pm-blue;
+    border-color    : @pm-blue;
+}
+
+#navigationBar-container button:nth-child(even) {
+    background-color: @pm-light-blue;
+    border-color    : @pm-light-blue;
+}
+
+#navigationBar-container button:nth-child(1) {
+    background-color: @ms2-color-primary;
+    border-color    : @ms2-color-primary;
+}
+
+
+/* green border on search bar */
+.MapSearchBar {
+    &.maps-search .input-group {
+        outline: 1px solid @ms2-color-primary;
+    }
+
+    .input-group {
+        outline: 1px solid @pm-light-blue;
+    }
+
+    .input-group-addon .glyphicon-search {
+        color: @ms2-color-text;
+    }
+}
+
+/* sliders color eg: TOC, Floating Legend */
+.noUi-target {
+    border-color    : none;
+    background-color: lighten(@pm-slider-color, 10%) !important;
+
+    &.noUi-horizontal {
+        .noUi-base {
+            .noUi-origin {
+                background-color: @ms2-color-shade-lighter;
+
+                .noUi-handle {
+                    border-top      : 1px solid @ms2-color-background;
+                    background-color: @pm-slider-color;
+
+                    &:hover {
+                        background-color: darken(@pm-slider-color, 10%);
+                    }
+
+                    &:before,
+                    &:after {
+                        background: transparent;
+                    }
+
+                    &:before {
+                        color: @ms2-color-text-primary;
+                    }
+
+                    .noUi-tooltip {
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: darken(@pm-slider-color, 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* sliders disabled color eg: TOC, Floating Legend */
+.noUi-target[disabled="true"] {
+    &.noUi-horizontal {
+        .noUi-base {
+            .noUi-origin {
+                .noUi-handle {
+                    .noUi-tooltip {
+                        &:hover {
+                            background-color: @pm-slider-color;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: @pm-slider-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* sliders color eg: TOC, Floating Legend */
+.mapstore-slider {
+    &.with-tooltip {
+        .noUi-target {
+            &.noUi-horizontal {
+                .noUi-base {
+                    &:after {
+                        background-color: @ms2-color-shade-lighter;
+                    }
+
+                    .noUi-origin {
+                        .noUi-handle {
+                            .noUi-tooltip {
+                                background-color: @pm-slider-color;
+                                color           : @ms2-color-text-primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// add bottom border on ms floating legend header
+.ms-legend-header {
+    border-bottom: 4px solid @pm-dark-blue;
+}
+
+.photomap-map-attribution {
+    position: absolute;
+    left    : 0;
+    color: lighten(@ms2-color-text, 30%);
+    >img {
+        height: 30px;
+    }
+}
+
+.pm-footer-desc {
+    color: lighten(@ms2-color-text, 30%); 
+}
