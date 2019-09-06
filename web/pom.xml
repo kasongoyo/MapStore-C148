@@ -510,6 +510,7 @@
                 </plugin>
                 <plugin>
                     <groupId>com.coderplus.maven.plugins</groupId>
+                     <!-- we need to rename localConfigSurveye to localConfig to make it compatible with MS -->
                     <artifactId>copy-rename-maven-plugin</artifactId>
                     <version>1.0</version>
                     <executions>
