@@ -10,11 +10,11 @@ Clone the repository with the --recursive option to automatically clone submodul
 
 Install NodeJS >= 7.10.0 , if needed, from [here](https://nodejs.org/en/download/releases/).
 
-Start the development application locally:
+Start the development application locally, run:
 
 `npm install`
 
-Then      
+followed by    
 
 `npm start`
 
@@ -32,13 +32,13 @@ Build
 
 We use maven as the build tool, and `build.sh` script to automate the build process. To build with default theme run;     
 
-`$ sh build.sh`     
+`sh build.sh`     
 
 To build with **surveye theme**, run;   
 
-`$ sh build theme="surveye"`
+`sh build theme="surveye"`
 
 In addition to themes, You can also configure mapstore
 version to be used during the build by providing `version` argument to the build script as follows;
 
-`$ sh build version='SNAPSHOT-2019'`
+`sh build version='SNAPSHOT-2019'`
