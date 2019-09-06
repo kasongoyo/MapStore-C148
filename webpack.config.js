@@ -10,7 +10,7 @@ module.exports = require('./MapStore2/buildConfig')(
     },
     {
         "themes/default": path.join(__dirname, "assets", "themes", "default", "theme.less"),
-        "themes/surveye": path.join(__dirname, "assets", "themes", "surveye", "theme.less"),
+        "themes/surveye": path.join(__dirname, "assets", "themes", "surveye", "theme.less")
     },
     {
         base: __dirname,

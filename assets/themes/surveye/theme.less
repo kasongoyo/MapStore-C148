@@ -100,13 +100,22 @@
 
 
 /* green border on search bar */
-.MapSearchBar {
-    &.maps-search .input-group {
-        outline: 1px solid @ms2-color-primary;
-    }
+.MapSearchBar.maps-search .input-group {
+    outline: 1px solid @ms2-color-primary;
 
+    .form-control {
+        color      : @pm-color-text-light;
+        font-weight: normal;
+    }
+}
+
+.MapSearchBar {
     .input-group {
         outline: 1px solid @pm-light-blue;
+    }
+
+    .form-control {
+        font-weight: bold;
     }
 
     .input-group-addon .glyphicon-search {
@@ -203,17 +212,52 @@
 // add bottom border on ms floating legend header
 .ms-legend-header {
     border-bottom: 4px solid @pm-dark-blue;
+
+    h5 {
+        font-weight: 800;
+    }
 }
 
 .photomap-map-attribution {
     position: absolute;
     left    : 0;
-    color: lighten(@ms2-color-text, 30%);
+    color   : lighten(@ms2-color-text, 30%);
+
     >img {
         height: 30px;
     }
 }
 
 .pm-footer-desc {
-    color: lighten(@ms2-color-text, 30%); 
+    color: lighten(@ms2-color-text, 30%);
+}
+
+.timeline-plugin-btn-group {
+    button[disabled] {
+        background-color: @ms2-color-primary;
+        border-color    : @ms2-color-primary;
+    }
+
+    button:nth-child(2),
+    button:nth-child(5),
+    button:nth-child(2):hover,
+    button:nth-child(5):hover {
+        background-color: @pm-blue;
+        border-color    : @pm-blue;
+    }
+
+    button,
+    button:hover {
+        background-color: @pm-light-blue;
+        border-color    : @pm-light-blue;
+    }
+}
+
+.timeline-plugin .ms-timeline-expand {
+    background-color: @pm-light-blue;
+    border-color    : @pm-light-blue;
+}
+
+.ms-inline-datetime .btn {
+    color: @pm-light-blue;  
 }
