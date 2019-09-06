@@ -4,13 +4,19 @@
 @pm-blue: #1b76b8;
 @pm-light-blue: #29a2cb;
 @pm-dark-blue: #35749c;
+@pm-green: #9fbf4b;
 
 // variable override
-@ms2-color-primary: #9fbf4b;
-@ms2-color-info:  #9fbf4b;
-@ms2-color-text: #444444;
-@ms2-color-disabled: rgb(15, 117, 188);
+// @ms2-color-primary: #9fbf4b;
+// @ms2-color-info:  #9fbf4b;
+@ms2-color-primary: @pm-dark-blue;
+@ms2-color-info: rgb(24, 81, 158);
+@ms2-color-disabled: @pm-light-blue;
 @ms2-color-success: rgb(146, 193, 62);
+
+@ms2-color-text: #444444;
+// @ms2-color-disabled: rgb(15, 117, 188);
+// @ms2-color-success: rgb(146, 193, 62);
 
 @pm-slider-color: @ms2-color-primary;
 @pm-color-text-light: lighten(@ms2-color-text, 20%);
@@ -18,7 +24,7 @@
 @ms2-color-warning: #e2b93d;
 @ms2-color-danger: #ff381e;
 
-@pagination-color:                     @link-color;
+@pagination-color:@pm-green;
 @pagination-bg:                        @ms2-color-background;
 @pagination-border:                    transparent;
 
@@ -26,8 +32,8 @@
 @pagination-hover-bg:                  @gray-lighter;
 @pagination-hover-border:              transparent;
 
-@pagination-active-color:              @ms2-color-background;
-@pagination-active-bg:                 @ms2-color-primary;
+// @pagination-active-color:              @pm-green;
+@pagination-active-bg: @pm-green;
 @pagination-active-border:             transparent;
 
 @pagination-disabled-color:            @ms2-color-text;

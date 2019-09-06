@@ -39,13 +39,13 @@
         &.nav-tabs>li.active>a,
         &.nav-tabs>li.active>a:hover,
         &.nav-tabs>li.active>a:focus {
-            border             : 1px solid @ms2-color-primary;
+            border             : 1px solid @pm-green;
             border-bottom-color: transparent;
             color              : @pm-blue;
         }
 
         &.nav-tabs {
-            border-bottom-color: @ms2-color-primary;
+            border-bottom-color: @pm-green;
         }
     }
 }
@@ -61,7 +61,6 @@
 
     // change all navbar link to blue color
     a {
-        color         : @pm-blue;
         text-transform: uppercase;
         font-weight   : bold;
     }
@@ -78,30 +77,15 @@
 
     // change login button 
     #loginButton {
-        background-color: @ms2-color-primary;
-        border-color    : @ms2-color-primary;
+        background-color: @pm-green;
+        border-color    : @pm-green;
     }
-}
-
-#navigationBar-container button:nth-child(odd) {
-    background-color: @pm-blue;
-    border-color    : @pm-blue;
-}
-
-#navigationBar-container button:nth-child(even) {
-    background-color: @pm-light-blue;
-    border-color    : @pm-light-blue;
-}
-
-#navigationBar-container button:nth-child(1) {
-    background-color: @ms2-color-primary;
-    border-color    : @ms2-color-primary;
 }
 
 
 /* green border on search bar */
 .MapSearchBar.maps-search .input-group {
-    outline: 1px solid @ms2-color-primary;
+    outline: 1px solid @pm-green;
 
     .form-control {
         color      : @pm-color-text-light;
@@ -123,99 +107,37 @@
     }
 }
 
-/* sliders color eg: TOC, Floating Legend */
-.noUi-target {
-    border-color    : none;
-    background-color: lighten(@pm-slider-color, 10%) !important;
+.ms-legend-action {
 
-    &.noUi-horizontal {
-        .noUi-base {
-            .noUi-origin {
-                background-color: @ms2-color-shade-lighter;
+    // add bottom border on ms floating legend header
+    .ms-legend-header {
+        border-bottom: 4px solid @pm-dark-blue;
 
-                .noUi-handle {
-                    border-top      : 1px solid @ms2-color-background;
-                    background-color: @pm-slider-color;
-
-                    &:hover {
-                        background-color: darken(@pm-slider-color, 10%);
-                    }
-
-                    &:before,
-                    &:after {
-                        background: transparent;
-                    }
-
-                    &:before {
-                        color: @ms2-color-text-primary;
-                    }
-
-                    .noUi-tooltip {
-                        cursor: pointer;
-
-                        &:hover {
-                            background-color: darken(@pm-slider-color, 10%);
-                        }
-                    }
-                }
-            }
+        .btn-primary {
+            background-color: @pm-green;
+            border-color    : @pm-green;
         }
+
+        .btn.no-border {
+            color: @pm-green;
+        }
+
+        h5 {
+            font-weight: 800;
+        }
+    }
+
+    .text-primary {
+        color: @pm-green;
+    }
+
+    .panel-collapse .panel-body .msSideGrid .noUi-target {
+        background-color: @pm-green;
     }
 }
 
-/* sliders disabled color eg: TOC, Floating Legend */
-.noUi-target[disabled="true"] {
-    &.noUi-horizontal {
-        .noUi-base {
-            .noUi-origin {
-                .noUi-handle {
-                    .noUi-tooltip {
-                        &:hover {
-                            background-color: @pm-slider-color;
-                        }
-                    }
-
-                    &:hover {
-                        background-color: @pm-slider-color;
-                    }
-                }
-            }
-        }
-    }
-}
-
-/* sliders color eg: TOC, Floating Legend */
-.mapstore-slider {
-    &.with-tooltip {
-        .noUi-target {
-            &.noUi-horizontal {
-                .noUi-base {
-                    &:after {
-                        background-color: @ms2-color-shade-lighter;
-                    }
-
-                    .noUi-origin {
-                        .noUi-handle {
-                            .noUi-tooltip {
-                                background-color: @pm-slider-color;
-                                color           : @ms2-color-text-primary;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-// add bottom border on ms floating legend header
-.ms-legend-header {
-    border-bottom: 4px solid @pm-dark-blue;
-
-    h5 {
-        font-weight: 800;
-    }
+.mapstore-slider.with-tooltip .noUi-target.noUi-horizontal .noUi-base .noUi-origin .noUi-handle .noUi-tooltip {
+    background-color: @pm-green;
 }
 
 .photomap-map-attribution {
@@ -230,34 +152,4 @@
 
 .pm-footer-desc {
     color: lighten(@ms2-color-text, 30%);
-}
-
-.timeline-plugin-btn-group {
-    button[disabled] {
-        background-color: @ms2-color-primary;
-        border-color    : @ms2-color-primary;
-    }
-
-    button:nth-child(2),
-    button:nth-child(5),
-    button:nth-child(2):hover,
-    button:nth-child(5):hover {
-        background-color: @pm-blue;
-        border-color    : @pm-blue;
-    }
-
-    button,
-    button:hover {
-        background-color: @pm-light-blue;
-        border-color    : @pm-light-blue;
-    }
-}
-
-.timeline-plugin .ms-timeline-expand {
-    background-color: @pm-light-blue;
-    border-color    : @pm-light-blue;
-}
-
-.ms-inline-datetime .btn {
-    color: @pm-light-blue;  
 }
